@@ -2,3 +2,5 @@
 /.vscode
 /.gitignore
 /package-lock.json
+**/.env*
+config/.env
