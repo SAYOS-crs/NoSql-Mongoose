@@ -1,3 +1,5 @@
-export default function BootStrap(app , express) {
-    
+import { UserRouter } from "./Modules/index.js";
+
+export default async function BootStrap(app, express) {
+  app.use("/", UserRouter);
 }
