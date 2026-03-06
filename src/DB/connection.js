@@ -5,9 +5,9 @@ export const DataBase_Connection = async () => {
     mongoose.connection.on("connected", () =>
       console.log("DataBase Connected"),
     );
-    mongoose.connection.on("connected", () => console.log("Cluster is Online"));
-    mongoose.connection.on("error", () => console.log("DB Error Connection"));
-
+    mongoose.connection.on("error", (error) =>
+      console.log("DB Error Connection", error),
+    );
     mongoose.connect(process.env.DB_URL);
   } catch (error) {
     console.log(error);

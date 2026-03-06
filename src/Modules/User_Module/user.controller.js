@@ -1,8 +1,12 @@
 import { Router } from "express";
-import { User_Add } from "./user.service.js";
+import {
+  delete_user,
+  find_user_byid,
+  update_user_info,
+} from "./user.service.js";
 
 const router = Router();
-
-router.post("/", User_Add);
-
+router.patch("/", update_user_info);
+router.delete("/", delete_user);
+router.get("/", find_user_byid);
 export default router;

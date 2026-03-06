@@ -11,9 +11,24 @@ const UserSchema = new Schema(
       require: true,
       unique: true,
     },
+    password: {
+      type: String,
+      require: true,
+    },
+    phone: {
+      type: String,
+      require: true,
+    },
+    age: {
+      type: Number,
+      min: [16, "age must be +16"],
+      max: [60, "age must be less then 60"],
+    },
   },
+
   {
-    collection: "User_Model",
+    collection: "User_Collection",
+    timestamps: true,
   },
 );
 
