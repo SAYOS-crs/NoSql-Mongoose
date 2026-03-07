@@ -258,3 +258,165 @@ export const Get_Notes = async (req, res) => {
 };
 // ---------------------------------------------------------
 // ---------------------------------------------------------
+// 7. Get a note by its id. (Only the owner of the note can make this operation) (Get the id for the logged-in user (userId)
+// from the token not the body) (0.5 Grade)
+export const Get_Note_by_ID = async (req, res) => {
+  const { noteId } = req.params;
+  const { token } = req.headers;
+  if (!token) {
+    throwResponsError({ res, massage: "token is requird" });
+  }
+  // ------------------------------------------------
+  try {
+    const { userId } = jwt.verify(token, process.env.JWT_SECRET_KEY);
+    const Note_Info = await NoteModel.findById(noteId);
+    if (!Note_Info.userId.equals(userId)) {
+      return ConflictError_Respons({
+        res,
+        Detals: "you are not the Note Owner",
+      });
+    }
+    SuccessRespons({ res, massage: "done", data: Note_Info });
+  } catch (error) {
+    throwResponsError({
+      res,
+      massage: "server error",
+      Detals: error,
+      status: 500,
+    });
+  }
+};
+// ---------------------------------------------------------
+// ---------------------------------------------------------
+// 8. Get a note for logged-in user by its content. (Get the id for the logged-in user (userId) from the token not the body)
+// (0.5 Grade)
+export const Get_Note_by_content = async (req, res) => {
+  const { token } = req.headers;
+  const { content } = req.query;
+  if (!token) {
+    throwResponsError({ res, massage: "token is requird" });
+  }
+  // ------------------------------------------------
+  try {
+    const { userId } = jwt.verify(token, process.env.JWT_SECRET_KEY);
+    const Note_Info = await NoteModel.findOne({ content });
+    if (!Note_Info.userId.equals(userId)) {
+      return ConflictError_Respons({
+        res,
+        Detals: "you are not the Note Owner",
+      });
+    }
+    SuccessRespons({ res, massage: "done", data: Note_Info });
+  } catch (error) {
+    throwResponsError({
+      res,
+      massage: "server error",
+      Detals: error,
+      status: 500,
+    });
+  }
+};
+// ---------------------------------------------------------
+// ---------------------------------------------------------
+// 9. Retrieves all notes for the logged-in user with user information, selecting only the “title, userId and createdAt”
+// from the note and the “email” from the user. (Get the id for the logged-in user (userId) from the token not the
+// body) (0.5 Grade)
+export const Get_All_NoteAndUser = async (req, res) => {
+  const { token } = req.headers;
+  if (!token) {
+    throwResponsError({ res, massage: "token is requird" });
+  }
+  // ------------------------------------------------
+  try {
+    const { userId } = jwt.verify(token, process.env.JWT_SECRET_KEY);
+    const Note_Info = await NoteModel.find({ userId }, { title: 1 }).populate([
+      { path: "userId", select: "email" },
+    ]);
+    if (!Note_Info) {
+      return NotFoundError_Respons({ res });
+    }
+    SuccessRespons({ res, massage: "done", data: Note_Info });
+  } catch (error) {
+    throwResponsError({
+      res,
+      massage: "server error",
+      Detals: error,
+      status: 500,
+    });
+  }
+};
+// ---------------------------------------------------------
+// ---------------------------------------------------------
+// 10. Using aggregation, retrieves all notes for the logged-in user with user information (name and email) and allow
+// searching notes by the title. (1 Grade)
+export const Aggregate_Note = async (req, res) => {
+  const { token } = req.headers;
+  let { title: NoteTitle } = req.query;
+  console.log(NoteTitle);
+
+  if (NoteTitle === undefined) {
+    NoteTitle = String;
+  }
+  if (!token) {
+    throwResponsError({ res, massage: "token is requird" });
+  }
+
+  try {
+    const { userId } = jwt.verify(token, process.env.JWT_SECRET_KEY);
+    const userID_ofNote = new mongoose.Types.ObjectId(userId);
+    const result = await NoteModel.aggregate([
+      { $match: { $and: [{ userId: userID_ofNote }, { title: NoteTitle }] } },
+      {
+        $lookup: {
+          from: "User_Collection",
+          localField: "userId",
+          foreignField: "_id",
+          as: "Creator",
+        },
+      },
+    ]);
+    SuccessRespons({ res, massage: "done", data: result });
+  } catch (error) {
+    throwResponsError({
+      res,
+      massage: "server error",
+      Detals: error,
+      status: 500,
+    });
+  }
+};
+// ---------------------------------------------------------
+// ---------------------------------------------------------
+// 11. Delete all notes for the logged-in user. (Get the id for the logged-in user (userId) from the token not the body) (0.5
+// Grade)
+
+export const DeleteAll_Note = async (req, res) => {
+  const { token } = req.headers;
+  if (!token)
+    throwResponsError({ res, status: 400, massage: "token is required" });
+  try {
+    const { userId } = jwt.verify(token, process.env.JWT_SECRET_KEY);
+    // ---------------------------------------------------------------
+    // ---------------------------------------------------------------
+    // ---------------------------------------------------------------
+    // -----------------------------------
+    // -----------------------------------
+    // -----------------------------------
+    // const ID = new mongoose.Types.ObjectId(userId);
+    const result = await NoteModel.deleteMany({ userId });
+
+    SuccessRespons({
+      status: 200,
+      res,
+      massage: "notes deleted successfly",
+      data: result,
+    });
+  } catch (error) {
+    throwResponsError({
+      res,
+      status: 500,
+      massage: "server error",
+      Detals: error,
+    });
+  }
+};
