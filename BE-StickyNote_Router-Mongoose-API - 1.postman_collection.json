@@ -1,0 +1,1734 @@
+{
+  "info": {
+    "_postman_id": "dc159a22-facc-49e6-8886-4a3971dc61cb",
+    "name": "BE-StickyNote_Router-Mongoose-API : 1",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47810947",
+    "_collection_link": "https://go.postman.co/collection/47810947-dc159a22-facc-49e6-8886-4a3971dc61cb?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "signup",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\" : \"elawasdasdy\",\r\n    \"email\" : \"elaa12332sdwdasdy@gmail.com\",\r\n    \"password\" : \"123456\",\r\n    \"phone\" : \"01141844204\",\r\n    \"age\" : 22\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3200/auth/signup",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3200",
+              "path": [
+                "auth",
+                "signup"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "signup",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\" : \"elawasdasdy\",\r\n    \"email\" : \"elaasdwdasdy@gmail.com\",\r\n    \"password\" : \"123456\",\r\n    \"phone\" : \"01141844204\",\r\n    \"age\" : 22\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3200/users/signup",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3200",
+                  "path": [
+                    "users",
+                    "signup"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "251"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"fb-7QesBbd3gUCTWkeRHRbCXBf2x0Q\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 06 Mar 2026 21:57:37 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": \"done\",\n    \"data\": {\n        \"name\": \"elawasdasdy\",\n        \"email\": \"elaasdwdasdy@gmail.com\",\n        \"password\": \"123456\",\n        \"phone\": \"01141844204\",\n        \"age\": 22,\n        \"_id\": \"69ab4dd147621c971195b645\",\n        \"createdAt\": \"2026-03-06T21:57:37.227Z\",\n        \"updatedAt\": \"2026-03-06T21:57:37.227Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\" : \"elaasdwdsa1a2sassd2ys@gmail.com\",\r\n    \"password\" : \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3200/auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3200",
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "login",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\" : \"elawdy@gmail.com\",\r\n    \"password\" : \"123456\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3200/users/login",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3200",
+                  "path": [
+                    "users",
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "280"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"118-j7mNRRpjVYiaCrD4cDacf+70KP4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 06 Mar 2026 22:26:40 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": \"login successfly\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYXdkeUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWIzYzJlMzJhZmFlOWRhNjc2MGQ2MSIsImlhdCI6MTc3MjgzNjAwMCwiZXhwIjoxNzcyODM5NjAwfQ.idBWs12jHiYn72O-AF6Q26-fyhxoSBc8xsOcOUG3G2o\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "user",
+      "item": [
+        {
+          "name": "update user info",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkYXNkeUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3Mjg4Mjg1NSwiZXhwIjoxNzcyODg2NDU1fQ.YZrfYsPXrIAjqHqrIgYx1KNhCI1tA4FGPgQvG5Kc8EM",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"elawdy\",\r\n    \"email\" : \"elaasdwdsa1a2sassd2ys@gmail.com\",\r\n    \"age\" : 30\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3200/users/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3200",
+              "path": [
+                "users",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "update user info error",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkYXNkeUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3Mjg4Mjg1NSwiZXhwIjoxNzcyODg2NDU1fQ.YZrfYsPXrIAjqHqrIgYx1KNhCI1tA4FGPgQvG5Kc8EM",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\":\"elawdy\",\r\n    \"email\" : \"elaasdwdsa1asassd2y@gmail.com\",\r\n    \"age\" : 30\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3200/users/",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3200",
+                  "path": [
+                    "users",
+                    ""
+                  ]
+                }
+              },
+              "status": "Conflict",
+              "code": 409,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "59"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"3b-1MySs8soBut0IoWW/XpnN72FYoU\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Mar 2026 11:28:06 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"Error\": \"Conflict Error\",\n    \"Detals\": \"email already exist !\"\n}"
+            },
+            {
+              "name": "update user info",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkYXNkeUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3Mjg4Mjg1NSwiZXhwIjoxNzcyODg2NDU1fQ.YZrfYsPXrIAjqHqrIgYx1KNhCI1tA4FGPgQvG5Kc8EM",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\":\"elawdy\",\r\n    \"email\" : \"elaasdwdsa1asassd2ys@gmail.com\",\r\n    \"age\" : 30\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3200/users/",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3200",
+                  "path": [
+                    "users",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "273"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"111-Ata4Fb3a9e41OSYjo1dV44ZqeNc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Mar 2026 11:28:25 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": \"info updated successfly\",\n    \"data\": {\n        \"_id\": \"69ab6385599d5fb1d4cd825e\",\n        \"name\": \"elawdy\",\n        \"email\": \"elaasdwdsa1asassd2ys@gmail.com\",\n        \"password\": \"123456\",\n        \"phone\": \"01141844204\",\n        \"age\": 30,\n        \"createdAt\": \"2026-03-06T23:30:13.721Z\",\n        \"updatedAt\": \"2026-03-07T11:28:25.583Z\",\n        \"__v\": 2\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "delete user",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkc2ExYXNhc3NkMnlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0NTYiLCJ1c2VySWQiOiI2OWFiNWI0ZDgzNWQ4ZmNiN2ZiYzhmMmUiLCJpYXQiOjE3NzI4MzkxMTMsImV4cCI6MTc3Mjg0MjcxM30.3J-1vUpGexsufASZv8pPyTLi9Hof5pch9FSoo4lqAxw",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3200/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3200",
+              "path": [
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get user info by id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkYXNkeUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3Mjg4Mjg1NSwiZXhwIjoxNzcyODg2NDU1fQ.YZrfYsPXrIAjqHqrIgYx1KNhCI1tA4FGPgQvG5Kc8EM",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:3200/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3200",
+              "path": [
+                "users"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "get user info by id",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkYXNkeUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3Mjg4Mjg1NSwiZXhwIjoxNzcyODg2NDU1fQ.YZrfYsPXrIAjqHqrIgYx1KNhCI1tA4FGPgQvG5Kc8EM",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:3200/users",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3200",
+                  "path": [
+                    "users"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "251"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"fb-rRKjW9HQQYcl3I+tCBVaHutuU1w\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Mar 2026 11:27:43 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": \"done\",\n    \"data\": {\n        \"_id\": \"69ab6385599d5fb1d4cd825e\",\n        \"name\": \"elawasdasdy\",\n        \"email\": \"elaasdwdasdy@gmail.com\",\n        \"password\": \"123456\",\n        \"phone\": \"01141844204\",\n        \"age\": 22,\n        \"createdAt\": \"2026-03-06T23:30:13.721Z\",\n        \"updatedAt\": \"2026-03-06T23:30:13.721Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Note",
+      "item": [
+        {
+          "name": "add note",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkc2ExYTJzYXNzZDJ5c0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3Mjg4ODczNCwiZXhwIjoxNzcyODkyMzM0fQ.AnHP7rJRtjMk8RJssKy8_cIrNkuDaubyHCUHeFAWgww",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"lol\",\r\n    \"content\":\"lorem123 asdasd  123123 123 lorem123 lorem123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3200/notes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3200",
+              "path": [
+                "notes"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "add note",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkc2ExYTJzYXNzZDJ5c0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3Mjg4NDE2OCwiZXhwIjoxNzcyODg3NzY4fQ.6mMxmc8ik-mb9kmne6DtJ-49xImBdaiZKowmgaaulww",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"title\":\"lol\",\r\n    \"content\":\"lorem123 lorem123 lorem123\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3200/notes",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3200",
+                  "path": [
+                    "notes"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "250"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"fa-vsOE6X1GlwL5rUlPJxYyxqhyWew\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Mar 2026 11:53:32 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": \"note add successfly\",\n    \"data\": {\n        \"title\": \"lol\",\n        \"content\": \"lorem123 lorem123 lorem123\",\n        \"userId\": \"69ab6385599d5fb1d4cd825e\",\n        \"_id\": \"69ac11bc0c0fb8f39530e737\",\n        \"createdAt\": \"2026-03-07T11:53:32.566Z\",\n        \"updatedAt\": \"2026-03-07T11:53:32.566Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "update note",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkc2ExYTJzYXNzZDJ5c0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3Mjg4NTM5MiwiZXhwIjoxNzcyODg4OTkyfQ.1JbTmUvFDCNxsXv5p_2BuegASH2b-bGHGJE67jYaoG4",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\" : \"lolyt\",\r\n    \"content\" : \"lolrasd\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3200/notes/69ac10d304e4a5d075cd7de2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3200",
+              "path": [
+                "notes",
+                "69ac10d304e4a5d075cd7de2"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "error",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWExMjMzMnNkd2Rhc2R5QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiMTIzNDU2IiwidXNlcklkIjoiNjlhYzFkMjdlMjc4MDNkYjY0ODVkYTJlIiwiaWF0IjoxNzcyODg3MzQ3LCJleHAiOjE3NzI4OTA5NDd9.w57FfSApQPJ5ub9flyPHd8z9ku7K-_kROnIXVx9IDQM",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"title\" : \"lolyt\",\r\n    \"content\" : \"lolrasd\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3200/notes/69ac10d304e4a5d075cd7de2",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3200",
+                  "path": [
+                    "notes",
+                    "69ac10d304e4a5d075cd7de2"
+                  ]
+                }
+              },
+              "status": "Conflict",
+              "code": 409,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "71"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"47-IE6Vurp9AngxA0PjW5Lc6GtRrFU\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Mar 2026 12:43:18 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"Error\": \"Conflict Error\",\n    \"Detals\": \"you are not the owner of the note\"\n}"
+            },
+            {
+              "name": "success",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkc2ExYTJzYXNzZDJ5c0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3Mjg4NTM5MiwiZXhwIjoxNzcyODg4OTkyfQ.1JbTmUvFDCNxsXv5p_2BuegASH2b-bGHGJE67jYaoG4",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"title\" : \"lolyt\",\r\n    \"content\" : \"lolrasd\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3200/notes/69ac10d304e4a5d075cd7de2",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3200",
+                  "path": [
+                    "notes",
+                    "69ac10d304e4a5d075cd7de2"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "238"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"ee-/CbV0RBu41iZk2WwjTgfePlgDW8\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Mar 2026 12:43:30 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": \"note updated successfly\",\n    \"data\": {\n        \"_id\": \"69ac10d304e4a5d075cd7de2\",\n        \"title\": \"lolyt\",\n        \"content\": \"lolrasd\",\n        \"userId\": \"69ab6385599d5fb1d4cd825e\",\n        \"createdAt\": \"2026-03-07T11:49:39.958Z\",\n        \"updatedAt\": \"2026-03-07T12:43:30.384Z\",\n        \"__v\": 11\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "replace note",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkc2ExYTJzYXNzZDJ5c0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3Mjg4Nzg0MSwiZXhwIjoxNzcyODkxNDQxfQ.qPb1JG1lnl9quH4T4heETkqLmtFq2Xir7sFLq-Mr3us",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\" : \"lol123a123sd123yt\",\r\n    \"content\" : \"loasdlra1323123sd\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3200/notes/replace/69ac22ab8c919108d962d7b3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3200",
+              "path": [
+                "notes",
+                "replace",
+                "69ac22ab8c919108d962d7b3"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": null,
+                  "type": "text",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "replace note",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkc2ExYTJzYXNzZDJ5c0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3Mjg4Nzg0MSwiZXhwIjoxNzcyODkxNDQxfQ.qPb1JG1lnl9quH4T4heETkqLmtFq2Xir7sFLq-Mr3us",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"title\" : \"lol123a123sd123yt\",\r\n    \"content\" : \"loasdlra1323123sd\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3200/notes/replace/69ac22ab8c919108d962d7b3",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3200",
+                  "path": [
+                    "notes",
+                    "replace",
+                    "69ac22ab8c919108d962d7b3"
+                  ],
+                  "query": [
+                    {
+                      "key": "",
+                      "value": null,
+                      "type": "text",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "259"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"103-X5ZEmqHNkNdFGryb9KPAEI+j018\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Mar 2026 13:07:47 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": \"note updated successfly\",\n    \"data\": {\n        \"_id\": \"69ac22ab8c919108d962d7b3\",\n        \"title\": \"lol123a123sd123yt\",\n        \"content\": \"loasdlra1323123sd\",\n        \"userId\": \"69ab6385599d5fb1d4cd825e\",\n        \"createdAt\": \"2026-03-07T13:07:47.771Z\",\n        \"updatedAt\": \"2026-03-07T13:07:47.771Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "update all titles",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkc2ExYTJzYXNzZDJ5c0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3Mjg4OTY1MywiZXhwIjoxNzcyODkzMjUzfQ.agq1vMd6WUbxYqL9OFhYyg3xMuB0vbtizw68PG8Zdp0",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\" : \"lore asdasdas  asdasd masdasd99\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3200/notes/all",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3200",
+              "path": [
+                "notes",
+                "all"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "update all titles",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkc2ExYTJzYXNzZDJ5c0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3Mjg4OTY1MywiZXhwIjoxNzcyODkzMjUzfQ.agq1vMd6WUbxYqL9OFhYyg3xMuB0vbtizw68PG8Zdp0",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"title\" : \"lore asdasdas  asdasd masdasd99\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3200/notes/all",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3200",
+                  "path": [
+                    "notes",
+                    "all"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "118"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"76-0CXmuC34xNeEQP/oQNAmwPkwYlU\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Mar 2026 13:28:37 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": \"done\",\n    \"data\": {\n        \"acknowledged\": true,\n        \"modifiedCount\": 3,\n        \"upsertedId\": null,\n        \"upsertedCount\": 0,\n        \"matchedCount\": 3\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Retrieve notes",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkc2ExYTJzYXNzZDJ5c0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3Mjg5MDkzMCwiZXhwIjoxNzcyODk0NTMwfQ.u54sgglarwH0zumVxIpIQly8D20yMAkIJNdl_Q7ckhw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3200/notes/paginate?limit=2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3200",
+              "path": [
+                "notes",
+                "paginate"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "2",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Retrieve notes",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkc2ExYTJzYXNzZDJ5c0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3Mjg5MDkzMCwiZXhwIjoxNzcyODk0NTMwfQ.u54sgglarwH0zumVxIpIQly8D20yMAkIJNdl_Q7ckhw",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:3200/notes/paginate?limit=2",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3200",
+                  "path": [
+                    "notes",
+                    "paginate"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "2"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "513"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"201-JP87KCmXrKa1ejI5s+FWGUx3t+8\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Mar 2026 13:50:23 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": \"done\",\n    \"data\": [\n        {\n            \"_id\": \"69ac234219132a74440e7243\",\n            \"title\": \"lore asdasdas  asdasd masdasd99\",\n            \"content\": \"lorem123 asdasd  123123 123 lorem123 lorem123\",\n            \"userId\": \"69ab6385599d5fb1d4cd825e\",\n            \"createdAt\": \"2026-03-07T13:08:18.262Z\",\n            \"updatedAt\": \"2026-03-07T13:28:37.738Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"69ac2b471520c0677be142ae\",\n            \"title\": \"lol\",\n            \"content\": \"lorem123 asdasd  123123 123 lorem123 lorem123\",\n            \"userId\": \"69ab6385599d5fb1d4cd825e\",\n            \"createdAt\": \"2026-03-07T13:42:31.075Z\",\n            \"updatedAt\": \"2026-03-07T13:42:31.075Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "get user note by id",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkc2ExYTJzYXNzZDJ5c0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3MjkxMjgxMiwiZXhwIjoxNzcyOTE2NDEyfQ.jdg9QPRmaSD3jYUWJbPYIMJx4WAJq6tYSGHYbE6vzUA",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3200/notes/69ac234219132a74440e7243",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3200",
+              "path": [
+                "notes",
+                "69ac234219132a74440e7243"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "get user note by id",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkc2ExYTJzYXNzZDJ5c0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3MjkxMjgxMiwiZXhwIjoxNzcyOTE2NDEyfQ.jdg9QPRmaSD3jYUWJbPYIMJx4WAJq6tYSGHYbE6vzUA",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:3200/notes/69ac234219132a74440e7243",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3200",
+                  "path": [
+                    "notes",
+                    "69ac234219132a74440e7243"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "282"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"11a-ZfNIM8+Avi9PGbmuYbkQxrprRd0\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Mar 2026 19:48:50 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": \"done\",\n    \"data\": {\n        \"_id\": \"69ac234219132a74440e7243\",\n        \"title\": \"lore asdasdas  asdasd masdasd99\",\n        \"content\": \"lorem123 asdasd  123123 123 lorem123 lorem123\",\n        \"userId\": \"69ab6385599d5fb1d4cd825e\",\n        \"createdAt\": \"2026-03-07T13:08:18.262Z\",\n        \"updatedAt\": \"2026-03-07T13:28:37.738Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "get note by content",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkc2ExYTJzYXNzZDJ5c0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3MjkxMjgxMiwiZXhwIjoxNzcyOTE2NDEyfQ.jdg9QPRmaSD3jYUWJbPYIMJx4WAJq6tYSGHYbE6vzUA",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3200/notes/note-by-content?content=lorem123",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3200",
+              "path": [
+                "notes",
+                "note-by-content"
+              ],
+              "query": [
+                {
+                  "key": "content",
+                  "value": "lorem123",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "get note by content",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkc2ExYTJzYXNzZDJ5c0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3MjkxMjgxMiwiZXhwIjoxNzcyOTE2NDEyfQ.jdg9QPRmaSD3jYUWJbPYIMJx4WAJq6tYSGHYbE6vzUA",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:3200/notes/note-by-content?content=lorem123",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3200",
+                  "path": [
+                    "notes",
+                    "note-by-content"
+                  ],
+                  "query": [
+                    {
+                      "key": "content",
+                      "value": "lorem123",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "245"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"f5-icF9rd/Iuv3USbiqt7VGqBfIKvY\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Mar 2026 19:57:27 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": \"done\",\n    \"data\": {\n        \"_id\": \"69ac234219132a74440e7243\",\n        \"title\": \"lore asdasdas  asdasd masdasd99\",\n        \"content\": \"lorem123\",\n        \"userId\": \"69ab6385599d5fb1d4cd825e\",\n        \"createdAt\": \"2026-03-07T13:08:18.262Z\",\n        \"updatedAt\": \"2026-03-07T13:28:37.738Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "get note with user",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkc2ExYTJzYXNzZDJ5c0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3MjkxNTU5OCwiZXhwIjoxNzcyOTE5MTk4fQ.Rd6mqZ5yjq1Uh4euOFRfsta5mFPQRTGS-kKDsLxCzuw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3200/notes/note-with-user",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3200",
+              "path": [
+                "notes",
+                "note-with-user"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "get note with user",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkc2ExYTJzYXNzZDJ5c0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3MjkxMjgxMiwiZXhwIjoxNzcyOTE2NDEyfQ.jdg9QPRmaSD3jYUWJbPYIMJx4WAJq6tYSGHYbE6vzUA",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:3200/notes/note-with-user",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3200",
+                  "path": [
+                    "notes",
+                    "note-with-user"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "621"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"26d-YmaeumkDZxcvSC6QXGpLfm5Sf9Y\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Mar 2026 20:10:17 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": \"done\",\n    \"data\": [\n        {\n            \"_id\": \"69ac234219132a74440e7243\",\n            \"title\": \"lore asdasdas  asdasd masdasd99\",\n            \"userId\": {\n                \"_id\": \"69ab6385599d5fb1d4cd825e\",\n                \"email\": \"elaasdwdsa1a2sassd2ys@gmail.com\"\n            }\n        },\n        {\n            \"_id\": \"69ac2b471520c0677be142ae\",\n            \"title\": \"lol\",\n            \"userId\": {\n                \"_id\": \"69ab6385599d5fb1d4cd825e\",\n                \"email\": \"elaasdwdsa1a2sassd2ys@gmail.com\"\n            }\n        },\n        {\n            \"_id\": \"69ac2b4a1520c0677be142b1\",\n            \"title\": \"lo asda sd l\",\n            \"userId\": {\n                \"_id\": \"69ab6385599d5fb1d4cd825e\",\n                \"email\": \"elaasdwdsa1a2sassd2ys@gmail.com\"\n            }\n        },\n        {\n            \"_id\": \"69ac2b4c1520c0677be142b4\",\n            \"title\": \"lo asda 123213  sd l\",\n            \"userId\": {\n                \"_id\": \"69ab6385599d5fb1d4cd825e\",\n                \"email\": \"elaasdwdsa1a2sassd2ys@gmail.com\"\n            }\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "get note with user and optional filter",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkc2ExYTJzYXNzZDJ5c0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3MjkxNTU5OCwiZXhwIjoxNzcyOTE5MTk4fQ.Rd6mqZ5yjq1Uh4euOFRfsta5mFPQRTGS-kKDsLxCzuw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3200/notes/aggregate?title=lol",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3200",
+              "path": [
+                "notes",
+                "aggregate"
+              ],
+              "query": [
+                {
+                  "key": "title",
+                  "value": "lol"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "with no filter",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkc2ExYTJzYXNzZDJ5c0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3MjkxNTU5OCwiZXhwIjoxNzcyOTE5MTk4fQ.Rd6mqZ5yjq1Uh4euOFRfsta5mFPQRTGS-kKDsLxCzuw",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:3200/notes/aggregate",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3200",
+                  "path": [
+                    "notes",
+                    "aggregate"
+                  ],
+                  "query": [
+                    {
+                      "key": "title",
+                      "value": "lol",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1912"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"778-mwDVivr3rWYC+TcNXhS0HIL1+u0\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Mar 2026 20:56:16 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": \"done\",\n    \"data\": [\n        {\n            \"_id\": \"69ac234219132a74440e7243\",\n            \"title\": \"loreasdasdaasdasdmasdasd99\",\n            \"content\": \"lorem123\",\n            \"userId\": \"69ab6385599d5fb1d4cd825e\",\n            \"createdAt\": \"2026-03-07T13:08:18.262Z\",\n            \"updatedAt\": \"2026-03-07T13:28:37.738Z\",\n            \"__v\": 0,\n            \"Creator\": [\n                {\n                    \"_id\": \"69ab6385599d5fb1d4cd825e\",\n                    \"name\": \"elawdy\",\n                    \"email\": \"elaasdwdsa1a2sassd2ys@gmail.com\",\n                    \"password\": \"123456\",\n                    \"phone\": \"01141844204\",\n                    \"age\": 30,\n                    \"createdAt\": \"2026-03-06T23:30:13.721Z\",\n                    \"updatedAt\": \"2026-03-07T11:31:20.154Z\",\n                    \"__v\": 3\n                }\n            ]\n        },\n        {\n            \"_id\": \"69ac2b471520c0677be142ae\",\n            \"title\": \"lol\",\n            \"content\": \"lorem123asdasd12312323orem123em123\",\n            \"userId\": \"69ab6385599d5fb1d4cd825e\",\n            \"createdAt\": \"2026-03-07T13:42:31.075Z\",\n            \"updatedAt\": \"2026-03-07T13:42:31.075Z\",\n            \"__v\": 0,\n            \"Creator\": [\n                {\n                    \"_id\": \"69ab6385599d5fb1d4cd825e\",\n                    \"name\": \"elawdy\",\n                    \"email\": \"elaasdwdsa1a2sassd2ys@gmail.com\",\n                    \"password\": \"123456\",\n                    \"phone\": \"01141844204\",\n                    \"age\": 30,\n                    \"createdAt\": \"2026-03-06T23:30:13.721Z\",\n                    \"updatedAt\": \"2026-03-07T11:31:20.154Z\",\n                    \"__v\": 3\n                }\n            ]\n        },\n        {\n            \"_id\": \"69ac2b4a1520c0677be142b1\",\n            \"title\": \"lo asda sd l\",\n            \"content\": \"lorem123 asdasd  123123 123 lorem123 lorem123\",\n            \"userId\": \"69ab6385599d5fb1d4cd825e\",\n            \"createdAt\": \"2026-03-07T13:42:34.486Z\",\n            \"updatedAt\": \"2026-03-07T13:42:34.486Z\",\n            \"__v\": 0,\n            \"Creator\": [\n                {\n                    \"_id\": \"69ab6385599d5fb1d4cd825e\",\n                    \"name\": \"elawdy\",\n                    \"email\": \"elaasdwdsa1a2sassd2ys@gmail.com\",\n                    \"password\": \"123456\",\n                    \"phone\": \"01141844204\",\n                    \"age\": 30,\n                    \"createdAt\": \"2026-03-06T23:30:13.721Z\",\n                    \"updatedAt\": \"2026-03-07T11:31:20.154Z\",\n                    \"__v\": 3\n                }\n            ]\n        },\n        {\n            \"_id\": \"69ac2b4c1520c0677be142b4\",\n            \"title\": \"lo asda 123213  sd l\",\n            \"content\": \"lorem123 asdasd  123123 123 lorem123 lorem123\",\n            \"userId\": \"69ab6385599d5fb1d4cd825e\",\n            \"createdAt\": \"2026-03-07T13:42:36.966Z\",\n            \"updatedAt\": \"2026-03-07T13:42:36.966Z\",\n            \"__v\": 0,\n            \"Creator\": [\n                {\n                    \"_id\": \"69ab6385599d5fb1d4cd825e\",\n                    \"name\": \"elawdy\",\n                    \"email\": \"elaasdwdsa1a2sassd2ys@gmail.com\",\n                    \"password\": \"123456\",\n                    \"phone\": \"01141844204\",\n                    \"age\": 30,\n                    \"createdAt\": \"2026-03-06T23:30:13.721Z\",\n                    \"updatedAt\": \"2026-03-07T11:31:20.154Z\",\n                    \"__v\": 3\n                }\n            ]\n        }\n    ]\n}"
+            },
+            {
+              "name": "with filter",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkc2ExYTJzYXNzZDJ5c0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3MjkxNTU5OCwiZXhwIjoxNzcyOTE5MTk4fQ.Rd6mqZ5yjq1Uh4euOFRfsta5mFPQRTGS-kKDsLxCzuw",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:3200/notes/aggregate?title=lol",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3200",
+                  "path": [
+                    "notes",
+                    "aggregate"
+                  ],
+                  "query": [
+                    {
+                      "key": "title",
+                      "value": "lol"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "487"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1e7-N3MYnH9gYRejTsOzMKwSZ4taO9I\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Mar 2026 20:56:31 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": \"done\",\n    \"data\": [\n        {\n            \"_id\": \"69ac2b471520c0677be142ae\",\n            \"title\": \"lol\",\n            \"content\": \"lorem123asdasd12312323orem123em123\",\n            \"userId\": \"69ab6385599d5fb1d4cd825e\",\n            \"createdAt\": \"2026-03-07T13:42:31.075Z\",\n            \"updatedAt\": \"2026-03-07T13:42:31.075Z\",\n            \"__v\": 0,\n            \"Creator\": [\n                {\n                    \"_id\": \"69ab6385599d5fb1d4cd825e\",\n                    \"name\": \"elawdy\",\n                    \"email\": \"elaasdwdsa1a2sassd2ys@gmail.com\",\n                    \"password\": \"123456\",\n                    \"phone\": \"01141844204\",\n                    \"age\": 30,\n                    \"createdAt\": \"2026-03-06T23:30:13.721Z\",\n                    \"updatedAt\": \"2026-03-07T11:31:20.154Z\",\n                    \"__v\": 3\n                }\n            ]\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "delete note",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkc2ExYTJzYXNzZDJ5c0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3Mjg4OTY1MywiZXhwIjoxNzcyODkzMjUzfQ.agq1vMd6WUbxYqL9OFhYyg3xMuB0vbtizw68PG8Zdp0",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3200/notes/69ac233f19132a74440e7240",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3200",
+              "path": [
+                "notes",
+                "69ac233f19132a74440e7240"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "delete note",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkc2ExYTJzYXNzZDJ5c0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3Mjg4OTY1MywiZXhwIjoxNzcyODkzMjUzfQ.agq1vMd6WUbxYqL9OFhYyg3xMuB0vbtizw68PG8Zdp0",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:3200/notes/69ac233f19132a74440e7240",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3200",
+                  "path": [
+                    "notes",
+                    "69ac233f19132a74440e7240"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "290"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"122-9zecFnR1QNfUCUcvtCJC50NnkfA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Mar 2026 13:37:09 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": \"note deleted successfly\",\n    \"data\": {\n        \"_id\": \"69ac233f19132a74440e7240\",\n        \"title\": \"lore asdasdas  asdasd masdasd99\",\n        \"content\": \"lorem123 asdasd  lorem123 lorem123\",\n        \"userId\": \"69ab6385599d5fb1d4cd825e\",\n        \"createdAt\": \"2026-03-07T13:08:15.365Z\",\n        \"updatedAt\": \"2026-03-07T13:28:37.738Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "delete all notes",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkc2ExYTJzYXNzZDJ5c0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3MjkxNzQ5NiwiZXhwIjoxNzcyOTIxMDk2fQ.p8LvfrWf90zodhw8JegoTSZk2L3lYvhJI0qlHv2dVlw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3200/notes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3200",
+              "path": [
+                "notes"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "delete all notes",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWFzZHdkc2ExYTJzYXNzZDJ5c0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJJZCI6IjY5YWI2Mzg1NTk5ZDVmYjFkNGNkODI1ZSIsImlhdCI6MTc3MjkxNzQ5NiwiZXhwIjoxNzcyOTIxMDk2fQ.p8LvfrWf90zodhw8JegoTSZk2L3lYvhJI0qlHv2dVlw",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:3200/notes",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3200",
+                  "path": [
+                    "notes"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "83"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"53-+vz/zIPdn+t2SwHM7VVxyaMkodw\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Mar 2026 21:05:28 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": \"note deleted successfly\",\n    \"data\": {\n        \"acknowledged\": true,\n        \"deletedCount\": 4\n    }\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
