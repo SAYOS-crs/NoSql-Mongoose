@@ -36,6 +36,7 @@ export const update_user_info = async (req, res) => {
       },
       {
         new: true,
+        returnDocument: "after",
       },
     );
     SuccessRespons({
